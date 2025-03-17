@@ -1,0 +1,105 @@
+
+
+.box {
+    align-self: auto;
+    height: 150px;
+    width: 400px;
+    margin: 10px;
+    background: plum;
+    margin: 10px ;
+}
+.box::before{
+    content: "Hello Sittie, sorry for making you worry, but I really am fine. I'm just having a hard time organizing my thoughts. And I'm really happy to know that there are people who cares about me. Anyways, thank u for worrying 'bout me, I really appreciate it. :) ";
+    align-content: center;
+}
+
+
+
+.bouncing-letters span {
+    align-items: center;
+    display: inline-block;
+    color: pink;
+    font-size: 64px;
+    font-weight: bold;
+    animation: bounce 0.8s ease
+    infinite alternate;
+}
+@keyframes bounce{
+    0% { transform: translateY(0) }
+    100% {transform: translateY(-20px) }
+}
+.bouncing-letters span:nth-child(1)
+{animation-delay: 0.1s;}
+.bouncing-letters span:nth-child(2)
+{animation-delay: 0.2s;}
+.bouncing-letters span:nth-child(3)
+{animation-delay: 0.3s;}
+.bouncing-letters span:nth-child(4)
+{animation-delay: 0.4s;}
+.bouncing-letters span:nth-child(5)
+{animation-delay: 0.5s;}
+.bouncing-letters span:nth-child(6)
+{animation-delay: 0.6s;}
+
+
+
+
+
+
+
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+.heart {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 0, 43);
+    transform: rotate(-45deg);
+    position: relative;
+}
+.heart::before,
+.heart::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%; 
+    position: absolute;
+}
+.heart::before {
+    top: -50px;
+    left: 0px;
+}
+.heart::after {
+    left: 50px;
+    top: 0px;
+}
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        rotate: -45deg;
+    }
+    25% {
+        transform: scale(1.25);
+        rotate: -45deg ;
+    }
+    45% {
+        transform: scale(1.5);
+        rotate: -45deg;
+    }
+}
+.heart {
+    margin-top: 100px;
+    align-self: first baseline;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    animation: heartbeat 1s infinite;
+}
+
+
